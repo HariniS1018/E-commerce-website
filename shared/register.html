@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registeration</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class=" vh-100 d-flex justify-content-center align-items-center">
+        <form action="register.php" class="bg-light px-4 pt-4" onsubmit="return validate()" method="post">
+            <h4 style="text-align: center; color:hotpink;">Register here..</h4>
+            <hr>
+            <table class="table table-borderless">
+                <tr>
+                    <td><label for="uname" class="form-conrtol mt-2">Username</label></td>
+                    <td><input required type="text" id="uname" name="uname" placeholder="username" class="form-conrtol mt-2"></td>
+                </tr>
+                <tr>
+                    <td><label for="upass" class="form-conrtol mt-2">Password</label></td>
+                    <td><input required type="password" id="upass" name="upass" placeholder="password" class="form-conrtol mt-2"></td>
+                </tr>
+                <tr>
+                    <td><label for="rpass" class="form-conrtol mt-2">Retype Password</label></td>
+                    <td><input required type="password" id="rpass" name="rpass" placeholder="password" class="form-conrtol mt-2"></td>
+                </tr>
+                <tr>
+                    <td><label for=utype class="form-conrtol mt-2">User type</label></td>
+                    <td><select required class="form-conrtol mt-2" name="utype">
+                    <option value="vendor" >vendor</option>
+                    <option value="customer">customer</option>
+                    <option value="admin">admin</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><input class="form-conrtol mt-2" type="reset" id="but" value="reset"></td>
+                    <td><input class="form-conrtol mt-2"  type="submit" style = "margin-left: 120px" id="but" value="submit" onclick="validate()"></td>
+                </tr>
+            </table>
+            <hr>
+            <div class="form-conrtol mt-4 text-muted d-flex justify-content-center pb-3">already having an account? 
+            <a href= "login.html" class="ps-2"> sign in </a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validate(){
+            pass1Obj = document.getElementById("upass")
+            pass2Obj = document.getElementById("rpass")
+            if(pass1Obj.value === pass2Obj.value){
+                return true;
+            }
+            else{
+                alert("password mismatch");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
