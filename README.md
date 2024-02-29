@@ -41,9 +41,3 @@ Customer
     Sort,search,filter based on price,rating etc... ---done(search)
     Compare Product
     
-
-done...
-    Single Sign on
-    ---------------
-    www.ecom.com/login
-    www.ecom.com/login
